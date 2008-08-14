@@ -141,11 +141,14 @@ var Facebox = Class.create({
 	},
 	
 	click_handler	: function(elem, e){
+	  this.loading();
 		Event.stop(e);
 		
 		// support for rel="facebox[.inline_popup]" syntax, to add a class
 		var klass = elem.rel.match(/facebox\[\.(\w+)\]/);
 		if (klass) klass = klass[1];
+		
+		new Effect.Appear(this.facebox, {duration: .3});
 		
 		if (elem.href.match(/#/)){
 			var url			= window.location.href.split('#')[0];
