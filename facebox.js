@@ -53,7 +53,7 @@ var Facebox = Class.create({
 	  </div>'
 		};
 		if (extra_set) Object.extend(this.settings, extra_set);
-		document.body.insert({bottom: this.settings.facebox_html});
+		$(document.body).insert({bottom: this.settings.facebox_html});
 		
 		this.preload = [ new Image(), new Image() ];
 		this.preload[0].src = this.settings.close_image;
