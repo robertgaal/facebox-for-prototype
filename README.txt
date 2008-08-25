@@ -14,4 +14,10 @@ http://groups.google.com/group/facebox/
 --------------------------------------------------------------------------
 
 Dependencies:   prototype & script.aculo.us + images & CSS files from original facebox
-Usage:          Append 'rel="facebox"' to an element to call it inside a so-called facebox
+Usage:          Append 'rel="facebox"' to an element to call it inside a so-called facebox.
+
+                You can also call it directly through the following code:
+                
+                facebox.loading();
+                facebox.reveal('Facebox contents here', null);
+                new Effect.Appear(facebox.facebox, {duration: .3});
